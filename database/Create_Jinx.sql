@@ -1,0 +1,8 @@
+CREATE TABLE Jinx (
+  roleID INT NOT NULL,
+  jinxID INT NOT NULL,
+  description TEXT NOT NULL,
+  ADD CONSTRAINT fk_roleId FOREIGN KEY (roleID) REFERENCES Role(id),
+  ADD CONSTRAINT fk_jinxId FOREIGN KEY (jinxID) REFERENCES Role(id),
+  ADD CONSTRAINT pk_jinx PRIMARY KEY (roleID, jinxID)
+);
